@@ -1,0 +1,83 @@
+:root {
+  font-family: 'Outfit', 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  
+  /* Modern neon gradient colors */
+  --bg-dark: #0b0b14;
+  --bg-panel: rgba(18, 18, 29, 0.7);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text-primary: #f3f3f6;
+  --text-secondary: #9494a8;
+  
+  /* Game Colors */
+  --color-snake: #10b981;       /* Emerald */
+  --color-snake-glow: rgba(16, 185, 129, 0.3);
+  --color-water: #06b6d4;       /* Cyan */
+  --color-water-glow: rgba(6, 182, 212, 0.3);
+  --color-gun: #f97316;         /* Orange */
+  --color-gun-glow: rgba(249, 115, 22, 0.3);
+  
+  /* Status Colors */
+  --color-win: #10b981;
+  --color-lose: #ef4444;
+  --color-draw: #8b5cf6;        /* Purple for draw */
+  
+  /* Main Accent Glow */
+  --accent-glow: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
+  background-image: 
+    var(--accent-glow),
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(249, 115, 22, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 50% 10%, rgba(6, 182, 212, 0.03) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+
+/* Beautiful custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
